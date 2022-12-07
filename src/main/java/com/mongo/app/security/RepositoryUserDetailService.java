@@ -48,6 +48,6 @@ public class RepositoryUserDetailService implements UserDetailsService{
 			throw new UsernameNotFoundException("Error en el login, el usuario "+username+" no tiene roles definidos en el sistema");
 		}
 		
-		return new User(usuario.getusername(), usuario.getPassword(), usuario.getEnabled(), true, true, true, authorities);
+		return new User(usuario.getUsername(), usuario.getPassword(), usuario.getEnabled(), true, true, true, authorities);
 	}
 }

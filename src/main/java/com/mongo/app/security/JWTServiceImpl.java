@@ -30,7 +30,6 @@ public class JWTServiceImpl implements IJWTService{
 	@Override
 	public String create(Authentication auth) throws IOException {
 		String username= ((User) auth.getPrincipal()).getUsername();
-		System.out.println("TEST TOKEN");
 		Collection<? extends GrantedAuthority> roles=auth.getAuthorities();
 	
 		Claims claims = Jwts.claims();

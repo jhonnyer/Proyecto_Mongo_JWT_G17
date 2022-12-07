@@ -58,7 +58,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 			try {
 				user =new ObjectMapper().readValue(request.getInputStream(), Usuario.class);
 				
-				 username=user.getusername();
+				 username=user.getUsername();
 				 password=user.getPassword();
 				
 				logger.info("Username desde request parameter (raw): "+username);

@@ -57,7 +57,7 @@ public class UsuarioServiceImpl implements IUsuarioService{
 		try {
 			Optional<Usuario> user=repository.findById(id);
 			repository.deleteById(user.get().getId());
-			return new ResponseEntity<String> ("El usuario "+user.get().getusername()+ " fue eliminado con éxito", HttpStatus.OK);
+			return new ResponseEntity<String> ("El usuario "+user.get().getUsername()+ " fue eliminado con éxito", HttpStatus.OK);
 		}catch(Exception e) {
 			return new ResponseEntity<String> (e.getCause().toString(), HttpStatus.INTERNAL_SERVER_ERROR);
 		}
